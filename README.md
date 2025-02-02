@@ -1,6 +1,6 @@
 team - 404: Brain Not Found  Hackathon project
 
-So we (aryan ,aryaman ,yash) have made a space facts explore page with integrated nasa api for nasa image of day and latest news and an animation of solar system andf diffrent planets facts 
+So we( Aryan ,Aryaman ,Yash) have made a Space Explore Page with integrated NASA api for nasa image of day and latest news and an animation of solar system and diffrent planets facts 
 
 ![Screenshot (23)](https://github.com/user-attachments/assets/5ea4e090-ae59-41be-922d-0ab260691641)
 ![Screenshot (24)](https://github.com/user-attachments/assets/b2e89b19-490e-4ce5-8966-15fa731990e0)
