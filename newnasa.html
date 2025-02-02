@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NASA - National Aeronautics and Space Administration</title>
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+
+    
+    <style>
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: 5px solid #ffcc00;
+        }
+        header h1 {
+            font-size: 3rem;
+        
+            text-transform: uppercase;
+            color: #ffcc00;
+            letter-spacing: 5px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.flickr.com/photos/nasawebbtelescope/albums/72177720313923911') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+/* Header Styles */
+         
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            position: relative;
+            padding: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #ffcc00;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 30px 0;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1.5s ease-out;
+        }
+        section p {
+            font-size: 1.2rem;
+            margin: 0 auto 20px;
+            max-width: 800px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .content div {
+            width: 30%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease;
+        }
+        .content div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+        }
+        .content div h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .content div p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        
+
+        /* Space Image Styling */
+        .space-img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            color: #fff;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.7);
+        }
+        footer p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+<header>
+    <h1> Space Facts Explorer </h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#missions">Missions</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <div class="content">
+        <div >
+            <h3>Explore the Universe</h3>
+            <p>NASA is at the forefront of space exploration. Discover the latest missions and learn about the incredible discoveries we're making in space.</p>
+            <a href="image_of_day.html"><img src='lala.jpg' class="space-img"></a>
+        </div>
+        <div>
+            <h3>Our Missions</h3>
+            <p>NASA's space missions take us to the farthest reaches of the solar system and beyond. From the Moon to Mars, we continue to push the boundaries of space exploration.</p>
+            <a href="missions.html" ><img src="orion.jpg" alt="Orion Nebula" class="space-img"></a>
+        </div>
+        <div>
+            <h3>Stay Informed</h3>
+            <p>Get the latest news and updates on NASA's missions, research, and technology advancements directly from our website.</p>
+            <a href="info.html"><img src="iss.jpg" alt="International Space Station" class="space-img"></a>
+        </div>
+    </div>
+</section>
+
+<section id="nasa-apod">
+    <h2>NASA Astronomy Picture of the Day</h2>
+    <h3 id="nasa-title">Loading...</h3>
+    <img id="nasa-img" src="" alt="NASA Astronomy Picture">
+    <p id="nasa-explanation">Fetching the latest image from NASA...</p>
+</section>
+
+
+<section id="missions">
+    <h2>Missions</h2>
+    <p>NASA is involved in a variety of exciting space missions. Some of the most notable ones include:</p>
+    <ul>
+        <li>Apollo Lunar Missions</li>
+        <li>Mars Rover Missions</li>
+        <li>James Webb Space Telescope</li>
+    </ul>
+    <img style="width: 200px; height: 200px;" src="mars_Rover.jpg" alt="Mars Rover" class="space-img">
+</section>
+
+<section id="news">
+    <h2>Latest News</h2>
+    <p>Check out the latest news and updates from NASA on our ongoing research and groundbreaking space exploration projects.</p>
+    <img style="width: 200px; height: 200px;" src="late.jpg" alt="Moon" class="space-img">
+</section>
+
+<!-- <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, feel free to get in touch with us via the contact form or follow us on our social media platforms.</p>
+    <a style="text-decoration:none;" href="https://www.instagram.com/aryan_14344_?igsh=MThtc3g5bGhpbXpqcw=="><img src="insta.jpg" style="height: 30px;"></a>
+</section> -->
+<div>
+    <section id="space-gallery">
+        <h2>Space Image Gallery</h2>
+    
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://cdn.britannica.com/31/160431-050-C38A5086/Image-Earth-Russian-Elektro-L-weather-satellite-2012.jpg" alt="Planet Earth" class="gallery-image" onclick="showInfo('earth-info')">
+                <div id="earth-info" class="info-popup">
+                    <p><strong>Planet Earth</strong>: Our home planet, the only known planet with life. Earth has a diverse ecosystem and is the third planet from the Sun.</p>
+                    <button onclick="closeInfo('earth-info')">Close</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKPjVbxo-4m4PeKNOgsS6UxWu9Bob4OVNOQ&s" alt="Mars" class="gallery-image" onclick="showInfo('mars-info')">
+                <div id="mars-info" class="info-popup">
+                    <p><strong>Mars</strong>: Known as the "Red Planet," Mars has the largest volcano in the solar system, Olympus Mons, and signs of ancient water.</p>
+                    <button onclick="closeInfo('mars-info')">Close</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaowoKOyOgRwfsL0J42iiOhceQpNKbHmQNRw&s" alt="Saturn" class="gallery-image" onclick="showInfo('saturn-info')">
+                <div id="saturn-info" class="info-popup">
+                    <p><strong>Saturn</strong>: Famous for its rings, Saturn is the sixth planet from the Sun and the second-largest in the solar system.</p>
+                    <button onclick="closeInfo('saturn-info')">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        #space-gallery {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+        }
+        .gallery-image {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.1);
+        }
+        .info-popup {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .info-popup button {
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .info-popup button:hover {
+            background-color: #e53e29;
+        }
+    </style>
+    
+    <script>
+        function showInfo(infoId) {
+            var infoPopups = document.querySelectorAll('.info-popup');
+            infoPopups.forEach(function(popup) {
+                popup.style.display = 'none'; // Hide all other popups
+            });
+            document.getElementById(infoId).style.display = 'block'; // Show the clicked image's popup
+        }
+    
+        function closeInfo(infoId) {
+            document.getElementById(infoId).style.display = 'none'; // Hide the popup
+        }
+    </script>
+    
+</div>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, feel free to get in touch with us via the contact form or follow us on our social media platforms.</p>
+    <a style="text-decoration:none;" href="https://www.instagram.com/aryan_14344_?igsh=MThtc3g5bGhpbXpqcw=="><img src="insta.jpg" style="height: 30px;"></a>
+</section>
+
+<section>
+    <h2 style="
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #ffcc00;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        animation: fadeInUp 1.5s ease-out;
+    "> The Solar System</h2>
+</section>
+</body>
+</html>

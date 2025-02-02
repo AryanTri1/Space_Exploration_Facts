@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Latest Missions</title>
+    <style>
+        /* Global Styles */
+        * {
+            background-image:url(pic.webp);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1c1c3c, #3a3a7d);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #ffcc00;
+        }
+        
+        /* Mission Section */
+        #missions {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        .mission {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .mission h3 {
+            color: #ffcc00;
+        }
+        
+        /* Loader */
+        .loader {
+            border: 6px solid #ccc;
+            border-top: 6px solid #ffcc00;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 NASA Latest Missions & Updates 🌌</h1>
+</header>
+
+<section id="missions">
+    <h2>🔴 Current NASA Missions</h2>
+    <div class="loader" id="loader"></div>
+    <div id="missions-container"></div>
+</section>
+
+<script>
+    const apiKey = "hmlWJpfQOTA3WUNObD7lcQAN7z1IdBqcfl7DlY80"; // Replace with your NASA API Key
+    const apiUrl = `https://api.nasa.gov/techtransfer/patent/?engine&api_key=${apiKey}`;
+
+    function fetchMissions() {
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const missionContainer = document.getElementById("missions-container");
+                document.getElementById("loader").style.display = "none"; // Hide Loader
+
+                let missions = data.results.slice(0, 5); // Get only the first 5 missions
+                
+                missions.forEach(mission => {
+                    let missionDiv = document.createElement("div");
+                    missionDiv.classList.add("mission");
+
+                    let missionTitle = mission[1]; // NASA provides title in array format
+                    let missionDesc = mission[3] || "No description available"; // Mission description
+
+                    missionDiv.innerHTML = `<h3>${missionTitle}</h3><p>${missionDesc}</p>`;
+                    missionContainer.appendChild(missionDiv);
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching NASA API:", error);
+                document.getElementById("missions-container").innerHTML = "<p>Failed to load missions. Try again later.</p>";
+            });
+    }
+
+    // Run function when page loads
+    document.addEventListener("DOMContentLoaded", fetchMissions);
+</script>
+
+</body>
+</html>

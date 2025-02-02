@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Missions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #3a2d2d;
+    }
+
+    h1 {
+      margin-top: 50px;
+      color: #fff;
+      background-color: #a79e9e;
+      padding: 15px;
+    }
+
+    /* Container for all missions */
+    .mission-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 30px;  /* Space between the mission blocks */
+    }
+
+    /* Mission block style */
+    .mission {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 250px;
+      height: 250px; /* Increased to fit name and image with space */
+      text-align: center;
+      position: relative;
+    }
+
+    .mission-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 5px; /* Reduced gap between the name and the image */
+    }
+
+    .mission img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .mission img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Information Section */
+    .mission-info {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: rgb(203, 255, 13);
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      width: 230px;
+      position: absolute;
+      top: 100%; /* Position it below the image */
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 10px;
+      z-index: 1;
+    }
+
+    /* Show info on hover */
+    .mission:hover .mission-info {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 style="color: antiquewhite;">NASA Space Missions</h1>
+
+  <div class="mission-container">
+    <div class="mission">
+      <div class="mission-name">Mars Rover</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhudSo7xFo5pqbP2av1py5Otd_JSoPosKwzw&s" alt="Mars Rover">
+      <div class="mission-info">The Mars Rover, including Perseverance, is exploring the surface of Mars to search for signs of past life and collect samples.</div>
+    </div>
+
+    <div class="mission">
+      <div class="mission-name">James Webb Space Telescope</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcztOcftCYz9dpBR0YK25lpt2KvXbyh4KHEA&s" alt="James Webb Space Telescope">
+      <div class="mission-info">The James Webb Space Telescope is designed to look deeper into the universe than ever before, studying distant galaxies and stars.</div>
+    </div>
+
+    <div class="mission">
+      <div class="mission-name">Apollo 11</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tZS-5f6vPxlcYfEymZA0v4FcrvMMzI4oTA&s" alt="Apollo 11">
+      <div class="mission-info">Apollo 11 was the first mission to land humans on the Moon in 1969. Neil Armstrong and Buzz Aldrin became the first humans to walk on the lunar surface.</div>
+    </div>
+
+    <div class="mission">
+      <div class="mission-name">Voyager 1</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleN_-zt0tMSpArxma95PrJQxnPKnoJDaP6w&s" alt="Voyager 1">
+      <div class="mission-info">Voyager 1 was launched in 1977 to study the outer solar system and is now the farthest human-made object from Earth.</div>
+    </div>
+
+    <div class="mission">
+      <div class="mission-name">Hubble Space Telescope</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrPVpV9RilAhbGM7w73bRZ2TnfKrYCJUluCQ&s" alt="Hubble Space Telescope">
+      <div class="mission-info">The Hubble Space Telescope has provided some of the most detailed images of space, helping us understand the universe's origins and structure.</div>
+    </div>
+
+    <div class="mission">
+      <div class="mission-name">Curiosity Rover</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAU3nsiayJTPdwtT8AXFdKbGekNcJaSDFdDA&s" alt="Curiosity Rover">
+      <div class="mission-info">Launched in 2011, Curiosity Rover is exploring Mars to study the planet's climate and geology and assess its past and present habitability.</div>
+    </div>
+  </div>
+
+</body>
+</html>
